@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Internship Hub - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container py-5" style="max-width: 460px;">
+  <h1 class="brand text-center">Internship Hub</h1>
+  <p class="text-muted text-center mb-4">Fair, simple internships for everyone</p>
+
+  <div class="card-soft">
+    <ul class="nav nav-pills mb-3 justify-content-center">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#loginPane">Login</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#registerPane">New student</button></li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- LOGIN: students and placement team use the same form; the server knows the role -->
+      <div class="tab-pane fade show active" id="loginPane">
+        <label class="form-label">Username</label>
+        <input id="l_username" class="form-control mb-2" autocomplete="username">
+        <label class="form-label">Password</label>
+        <input id="l_password" type="password" class="form-control mb-3" autocomplete="current-password">
+        <button id="loginBtn" class="btn btn-main w-100">Login</button>
+        <p class="text-muted small mt-3 mb-0">Placement team? Use the login given by your college. You will be taken to the placement page.</p>
+      </div>
+
+      <!-- REGISTER: only STUDENT accounts can be created here -->
+      <div class="tab-pane fade" id="registerPane">
+        <label class="form-label">Full name</label>
+        <input id="r_name" class="form-control mb-2">
+        <label class="form-label">Qualification</label>
+        <input id="r_qualification" class="form-control mb-2" placeholder="B.Tech CSE">
+        <label class="form-label">Username</label>
+        <input id="r_username" class="form-control mb-2" autocomplete="username">
+        <label class="form-label">Password (min 6 characters)</label>
+        <input id="r_password" type="password" class="form-control mb-3" autocomplete="new-password">
+        <button id="registerBtn" class="btn btn-main w-100">Create student account</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast">Done!</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="common.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
